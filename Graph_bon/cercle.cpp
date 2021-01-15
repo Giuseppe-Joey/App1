@@ -8,52 +8,47 @@
 
 using namespace std;
 
-int ray;
 
-Cercle::Cercle()
+cercle::cercle()
 {
-	  rayon = 1;
-	  pointx = 0;
-	  pointy = 0;
+	  ray = 1;
+	  ancrage.x = 0;
+	  ancrage.y = 0;
 }
 
-Cercle::Cercle(int rayon, int AngrageX, int AngrageY);
+cercle::cercle(int rayon, int AngrageX, int AngrageY)
 {
 	  ray = rayon;
 	  ancrage.x = AngrageX;
 	  ancrage.y = AngrageY;
 }
 
-Cercle::~Cercle()
+cercle::~cercle()
 {
 }
 
-set_rayon(int r)
+void cercle::set_rayon(int r)
 {
-  	rayon = r;		
+  	ray = r;		
 }
 
 
-int get_rayon();
+int cercle::get_rayon()
 {
-  	return rayon;	
+  	return ray;	
 }
 
 
-double aire()
+double cercle::aire()
 {
-	return ((rayon^2)*3,14);
-}
-
-double afficher_aire()
-{
-	cout << "L'aire du cercle : " << aire << end1;
+	return ((ray^2)*3,141592653);
 }
 
 
-int afficher()
+
+void cercle::afficher(ostream & s)
 {
-	cout << "Le rayon : " << rayon << end1;
+	cout << "Le rayon : " << ray << endl;
 }
 
 

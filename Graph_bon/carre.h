@@ -13,7 +13,7 @@ class carre : public rectangle
 
 private:
 //attribut
-	int largeur;
+	int large;
 	
 
 public:
@@ -23,9 +23,9 @@ public:
 	~carre();
 	
 //fonction
-	void set_largeur();
-	get_largeur();
+	void set_largeur(int l);
+	int get_largeur();
 	double aire();
 	double afficher_aire();
-	void afficher();
+	void afficher(ostream & s);
 };

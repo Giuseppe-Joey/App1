@@ -8,16 +8,14 @@
 
 using namespace std;
 
- int large;
-
 carre::carre()
 {
-	  largeur = 1;
+	  large = 1;
 	  ancrage.x = 0;
 	  ancrage.y = 0;
 }
 
-carre::carre(int largeur,  int AngrageX, int AngrageY);
+carre::carre(int largeur,  int AngrageX, int AngrageY)
 {
 	  large = largeur;
 	  ancrage.x = AngrageX;
@@ -30,27 +28,27 @@ carre::~carre()
 
 void carre::set_largeur(int l)
 {
-  	largeur = l;	
+  	large = l;	
 }
 
 
-int carre::get_largeur();
+int carre::get_largeur()
 {
-  	return largeur;	
+  	return large;	
 }
 
 
 double carre::aire()
 {
-	return (largeur * largeur);
+	return (large * large);
 }
 
 
 
 
-void carre::afficher()
+void carre::afficher(ostream & s)
 {
-	cout << "le carre avec la largeur : " << largeur << endl;
+	s << "le carre avec la largeur : " << large << endl;
 }
 
 

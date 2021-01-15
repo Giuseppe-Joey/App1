@@ -8,12 +8,12 @@
 
 using namespace std;
 
-class cerlce : public Forme
+class cercle : public Forme
 {
 
 private:
 //attribut
-	int rayon;
+	int ray;
 	
 
 public:
@@ -23,10 +23,9 @@ public:
 	~cercle();
 	
 //fonction
-	void set_rayon();
-	get_rayon();
+	void set_rayon(int r);
+	int get_rayon();
 	double aire();
-	double afficher_aire();
-	void afficher();
+	void afficher(ostream & s);
 };
 
