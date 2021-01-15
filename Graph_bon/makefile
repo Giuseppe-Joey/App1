@@ -6,7 +6,7 @@
 #	clean
 #
 EXECUTABLE: canevas.o couche.o forme.o graphicus-01.o tests.o carre.o cercle.o rectangle.o vecteur.o
-	g++ -o  EXECUTABLE canevas.o couche.o forme.o graphicus-01.o tests.o carre.o cercle.o rectangle.o
+	g++ -o  EXECUTABLE canevas.o couche.o forme.o graphicus-01.o tests.o carre.o cercle.o rectangle.o vecteur.o
 #
 canevas.o: canevas.cpp canevas.h forme.h couche.h coordonnee.h
 	g++  canevas.cpp -g -c
@@ -33,6 +33,9 @@ rectangle.o: rectangle.cpp rectangle.h coordonnee.h
 	g++ rectangle.cpp -g -c
 #
 
+vecteur.o: vecteur.cpp vecteur.h forme.h coordonnee.h
+	g++ vecteur.cpp -g -c
+#
 clean:
 	rm -f *.o
 # fin du makefile
