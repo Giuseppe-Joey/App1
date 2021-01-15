@@ -13,8 +13,8 @@ class rectangle : public Forme
 
 private:
 //attribut
-	int largeur;
-	int hauteur;
+	int large;
+	int haut;
 	
 
 public:
@@ -24,13 +24,12 @@ public:
 	~rectangle();
 	
 //fonction
-	void set_largeur();
-	void set_hauteur();
-	get_largeur();
-	get_hauteur();
+	void set_largeur(int l);
+	void set_hauteur(int h);
+	int get_largeur();
+	int get_hauteur();
 	double aire();
-	double afficher_aire();
-	void afficher();
+	void afficher(ostream & s);
 };
 
 

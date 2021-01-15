@@ -8,18 +8,17 @@
 
 using namespace std;
 
- int large;
- int haut;
 
-Rectangle::Rectangle()
+rectangle::rectangle()
 {
-	  largeur = 1;
-	  hauteur = 1;
-	  pointx = 0;
-	  pointy = 0;
+	  large = 1;
+	  haut = 1;
+	  ancrage.x = 0;
+	  ancrage.y = 0;
+	  
 }
 
-Rectangle::Rectangle(int largeur, int hauteur,  int AngrageX, int AngrageY);
+rectangle::rectangle(int largeur, int hauteur,  int AngrageX, int AngrageY)
 {
 	  large = largeur;
 	  haut = hauteur;
@@ -27,44 +26,38 @@ Rectangle::Rectangle(int largeur, int hauteur,  int AngrageX, int AngrageY);
 	  ancrage.y = AngrageY;
 }
 
-Rectangle::~Rectangle()
+rectangle::~rectangle()
 {
 }
 
-set_largeur(int l)
+void rectangle::set_largeur(int l)
 {
-  	largeur = l;	
+  	large = l;	
 }
 
-set_hauteur(int h)
+void rectangle::set_hauteur(int h)
 {
-  	hauteur = h;	
+  	haut = h;	
 }
 
-int get_largeur();
+int rectangle::get_largeur()
 {
-  	return largeur;	
+  	return large;	
 }
 
-int get_hauteur();
+int rectangle::get_hauteur()
 {
-  	return hauteur;	
+  	return haut;	
 }
 
-double aire()
+double rectangle::aire()
 {
-	return (largeur * hauteur);
+	return (large * haut);
 }
 
-double afficher_aire()
+void rectangle::afficher(ostream & s)
 {
-	cout << "L'aire du rectangle : " << aire << end1;
-}
-
-
-int afficher()
-{
-	cout << "le rectangle avec la largeur : " << largeur << "et la hauteur" << hauteur << end1;
+	s << "le rectangle avec la largeur : " << large << "et la hauteur" << haut << endl;
 }
 
 
