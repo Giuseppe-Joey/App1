@@ -2,19 +2,20 @@
  * Fichier: vecteur.h
  ********/
 
-#include "fomre.h"
+#include "forme.h"
 #include <iostream>
 
 using namespace std;
 
-class vecteur : public forme {
+class vecteur : public Forme 
+{
 
 private:
   // atribut
 
   int taille;
   int capacity;
-  forme **tableau;
+  Forme **tableau;
 
 public:
   // constructeur
