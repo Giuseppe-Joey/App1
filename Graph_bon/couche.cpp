@@ -37,10 +37,10 @@ double Couche::Aire()
 {
 	double airTotal = 0;
 	
-	for(int i=0; i < v.get_taille(); i++)
+	for(int i=0; i < v.get_size(); i++)
         {
 
-            airTotal += v.aire();
+            airTotal += v.obtenir(i)->aire();
         } 
 	
 	return airTotal;
@@ -54,7 +54,11 @@ bool Couche::Translater(int x, int y)
 	}
 	else
 	{
-				
+		for(int i=0; i < v.get_size(); i++)
+        	{
+
+            		v.obtenir(i)->translater(x,y);
+        	} 				
 	}				
 }
 
@@ -71,12 +75,12 @@ bool Couche::Reinitialiser()
 	}			
 }
 
-void SetEtat(Etat lEtat)
+void Couche::SetEtat(Etat lEtat)
 {
 	unEtat = lEtat;
 }
 
-Etat getEtat()
+Couche::Etat Couche::getEtat()
 {
 	return unEtat;
 }

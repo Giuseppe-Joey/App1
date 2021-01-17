@@ -129,15 +129,6 @@ void vecteur::afficher_vecteur(ostream & s)
 }
 
 
-int vecteur::get_taille()
-{
-  	return taille;	
-}
-
-int vecteur::get_tableau()
-{
-  	return tableau;	
-}
 
 
 

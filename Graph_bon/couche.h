@@ -45,7 +45,7 @@ class Couche
     double Aire();
     bool Translater(int x, int y);
     bool Reinitialiser();
-    void SetEtat();
+    void SetEtat(Etat lEtat);
     Etat getEtat();
     void afficher(ostream& s);
         

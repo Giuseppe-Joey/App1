@@ -32,8 +32,4 @@ public:
   Forme* retrait(int index);
   Forme* obtenir(int index);
   void afficher_vecteur(ostream & s);
-  
-  int get_taille();
-  int get_tableau();
-  
 };
