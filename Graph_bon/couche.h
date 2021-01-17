@@ -11,9 +11,44 @@
 #ifndef COUCHE_H
 #define COUCHE_H
 
-class Couche
+#include <iostream>
+#include "forme.h"
+#include "vecteur.h"
+
+using namespace std;
+
+class Couche 
 {
-   // Classe a completer
+    public:
+	
+	enum Etat
+    	{
+        Initialisee,
+        Active,
+        Inactive,
+        Cachee
+    	};
+
+    private:
+    	vecteur v;
+    	Etat unEtat;
+    	
+    public:
+     
+    Couche();
+    ~Couche();
+    
+    // method
+    bool AjoutForme(Forme* f);
+    Forme* RetireForme(int index);
+    Forme* ObtenirForme(int index);
+    double Aire();
+    bool Translater(int x, int y);
+    bool Reinitialiser();
+    void SetEtat();
+    Etat getEtat();
+    void afficher(ostream& s);
+        
 };
 
 #endif

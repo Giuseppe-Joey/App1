@@ -20,7 +20,7 @@ EXECUTABLE: canevas.o couche.o forme.o graphicus-01.o tests.o carre.o cercle.o r
 canevas.o: canevas.cpp canevas.h forme.h couche.h coordonnee.h
 	g++  canevas.cpp -g -c
 #
-couche.o: couche.cpp couche.h
+couche.o: couche.cpp couche.h 
 	g++ couche.cpp -g -c
 #
 forme.o: forme.cpp forme.h coordonnee.h

@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class vecteur : public Forme 
+class vecteur 
 {
 
 private:
@@ -22,14 +22,18 @@ public:
   vecteur();
   ~vecteur();
 
-  // fonction
+  // method
   int get_capacity();
   int get_size();
   bool add_capacity();
-  void vider_vecteur();
+  void vider();
   bool vecteur_vide();
-  bool ajout_forme(Forme* valeur);
-  Forme* retrait_forme(int index);
-  Forme* obtenir_forme(int index);
+  bool ajout(Forme* valeur);
+  Forme* retrait(int index);
+  Forme* obtenir(int index);
   void afficher_vecteur(ostream & s);
+  
+  int get_taille();
+  int get_tableau();
+  
 };
