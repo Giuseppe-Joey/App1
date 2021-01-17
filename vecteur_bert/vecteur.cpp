@@ -1,8 +1,6 @@
 #include "vecteur.h"
 #include <iostream>
-//#include "carre.h"
-//#include "rectangle.h"
-//#include "cercle.h"
+
 
 
 
@@ -33,8 +31,8 @@ bool Vecteur::ajoutFin(Forme* valeur)
 
     if(tableau[nbElem] = valeur)
     {
-    nbElem++;
-    return 1;
+    	nbElem++;
+    	return 1;
     }
     
     else 
@@ -141,7 +139,7 @@ void Vecteur::viderVecteur()
 
 /*******************************************************************/
 
-Forme* Vecteur::checkforme(int flot)
+Forme* Vecteur::checkForme(int flot)
 {
 	if (tableau[flot] == NULL)
 	{
@@ -155,3 +153,13 @@ Forme* Vecteur::checkforme(int flot)
 	
 
 }
+/*******************************************************************/
+
+
+
+
+
+
+
+
+/*******************************************************************/

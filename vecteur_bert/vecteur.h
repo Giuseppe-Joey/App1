@@ -25,7 +25,7 @@ class Vecteur
 	Forme* check(int num);
 	void printVecteur();
 	void viderVecteur();
-	Forme* checkforme(int flot);
+	Forme* checkForme(int flot);
 };
 	
 	
