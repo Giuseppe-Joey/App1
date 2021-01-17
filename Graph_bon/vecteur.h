@@ -25,7 +25,11 @@ public:
   // fonction
   int get_capacity();
   int get_size();
-  void add_capacity();
+  bool add_capacity();
   void vider_vecteur();
   bool vecteur_vide();
+  bool ajout_forme(Forme* valeur);
+  Forme* retrait_forme(int index);
+  Forme* obtenir_forme(int index);
+  void afficher_vecteur(ostream & s);
 };

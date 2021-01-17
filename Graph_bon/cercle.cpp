@@ -4,7 +4,6 @@
 
 #include "cercle.h"
 #include <iostream>
-#include "coordonnee.h"
 
 using namespace std;
 
@@ -41,14 +40,15 @@ int cercle::get_rayon()
 
 double cercle::aire()
 {
-	return ((ray^2)*3,141592653);
+	return ((ray*ray)*3,141592653);
 }
 
 
 
 void cercle::afficher(ostream & s)
 {
-	cout << "Le rayon : " << ray << endl;
+	s << "Le rayon : " << get_rayon() << "\n Point d'ancrage =" <<"."<< endl;
+	
 }
 
 
