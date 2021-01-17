@@ -47,8 +47,7 @@ class Couche
     bool Reinitialiser();
     void SetEtat(Etat lEtat);
     Etat getEtat();
-    void afficher(ostream& s);
-        
+    void afficher(ostream& s);     
 };
 
 #endif

@@ -71,6 +71,7 @@ bool Couche::Reinitialiser()
 	else
 	{
 		v.vider();
+		SetEtat(Cachee);
 		return true;
 	}			
 }
@@ -83,6 +84,11 @@ void Couche::SetEtat(Etat lEtat)
 Couche::Etat Couche::getEtat()
 {
 	return unEtat;
+}
+
+void Couche::afficher(ostream & s)
+{
+	v.afficher_vecteur(s);
 }
 
 

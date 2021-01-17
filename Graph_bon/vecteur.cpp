@@ -124,7 +124,7 @@ void vecteur::afficher_vecteur(ostream & s)
 {
 	for(int i = 0; i < taille; i++)
 	{
-		s << "Le vecteur: " << tableau[i] << endl;
+		tableau[i]->afficher(s);
 	}
 }
 

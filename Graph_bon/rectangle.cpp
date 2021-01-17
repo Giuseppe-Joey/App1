@@ -57,7 +57,7 @@ double rectangle::aire()
 
 void rectangle::afficher(ostream & s)
 {
-	s << "le rectangle avec la largeur : " << large << "et la hauteur" << haut << endl;
+	s << "Rectangle (" << large << "et la hauteur" << haut << endl;
 }
 
 

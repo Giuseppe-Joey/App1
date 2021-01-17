@@ -38,6 +38,7 @@ public:
 
 private:
      Couche couches[MAX_COUCHES];
+     Couche c;
 };
 
 #endif
