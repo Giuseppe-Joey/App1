@@ -15,7 +15,7 @@ class Vecteur
 	~Vecteur();  //détruit tout
 	
 	
-	void ajoutFin(Forme* valeur);
+	bool ajoutFin(Forme* valeur);
 	void doublerCapacite();
 	Forme* retrait(int place);
 	void retraitFin();
@@ -25,7 +25,7 @@ class Vecteur
 	Forme* check(int num);
 	void printVecteur();
 	void viderVecteur();
-	
+	Forme* checkforme(int flot);
 };
 	
 	

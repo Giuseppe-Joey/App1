@@ -1,5 +1,8 @@
 #include "vecteur.h"
 #include <iostream>
+//#include "carre.h"
+//#include "rectangle.h"
+//#include "cercle.h"
 
 
 
@@ -19,7 +22,7 @@ Vecteur::~Vecteur()
 }
 
 /*******************************************************************/
-void Vecteur::ajoutFin(Forme* valeur)
+bool Vecteur::ajoutFin(Forme* valeur)
 {
 
     if(nbElem == capacite)
@@ -27,8 +30,17 @@ void Vecteur::ajoutFin(Forme* valeur)
         doublerCapacite();
     }
 
-    tableau[nbElem] = valeur;
+
+    if(tableau[nbElem] = valeur)
+    {
     nbElem++;
+    return 1;
+    }
+    
+    else 
+    {
+   	return 0;
+    }
 }
 
 /*******************************************************************/
@@ -64,6 +76,8 @@ Forme* Vecteur::retrait(int place)
     {
         tableau[i] = tableau[i + 1];
     }
+    
+    nbElem--;
 
     return ptrCpy;
 }
@@ -126,3 +140,18 @@ void Vecteur::viderVecteur()
 }
 
 /*******************************************************************/
+
+Forme* Vecteur::checkforme(int flot)
+{
+	if (tableau[flot] == NULL)
+	{
+		return nullptr;
+	}
+	
+	else
+	{
+		return tableau[flot];
+	}
+	
+
+}
