@@ -11,7 +11,7 @@ vecteur::vecteur()
 {
   taille = 0;
   capacity = 10;
-  tableau = new Forme*[10];
+  tableau = new Forme*[capacity];
 }
 
 vecteur::~vecteur() 
@@ -56,15 +56,23 @@ bool vecteur::add_capacity()
 
 void vecteur::vider() 
 {
-  for (int i = 0; i > taille; i++) 
-  {
-    delete tableau[i];
-  }
+    delete[] tableau;
+    tableau = new Forme *[capacity];
+    taille=0;
 }
 
 
 bool vecteur::vecteur_vide() {
-  return taille == 0;
+  
+  if(taille == 0)
+  {
+  return true;
+  }
+  else
+  {
+  return false;
+  }
+  
 }
 
 
@@ -96,11 +104,12 @@ Forme* vecteur::retrait(int index)
 	{
 		Forme* ptrforme = tableau[index];
 		
-		for(int i = index; i = taille - 1; i++)
+		for(int i = index; i < taille - 1; i++)
 		{
 			tableau[i] = tableau[i + 1];
 		}
 		
+		taille--;
 		return ptrforme;
 	}
 }

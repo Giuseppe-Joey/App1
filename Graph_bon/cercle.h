@@ -2,9 +2,12 @@
  * Fichier: cerlce.h
 ********/
 
+#ifndef CERCLE_H
+#define CERCLE_H
+
 #include <iostream>
 #include "forme.h"
-#include "coordonnee.h"
+
 
 using namespace std;
 
@@ -29,3 +32,4 @@ public:
 	void afficher(ostream & s);
 };
 
+#endif

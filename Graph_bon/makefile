@@ -26,10 +26,10 @@ couche.o: couche.cpp couche.h forme.h vecteur.h coordonnee.h
 forme.o: forme.cpp forme.h coordonnee.h
 	g++ forme.cpp -g -c
 #
-graphicus-01.o: graphicus-01.cpp  tests.h canevas.h forme.h couche.h vecteur.h coordonnee.h
+graphicus-01.o: graphicus-01.cpp  tests.h canevas.h forme.h couche.h vecteur.h coordonnee.h rectangle.h
 	g++ graphicus-01.cpp -g -c
 #
-tests.o: tests.cpp tests.h canevas.h forme.h couche.h vecteur.h coordonnee.h
+tests.o: tests.cpp tests.h canevas.h forme.h couche.h vecteur.h coordonnee.h rectangle.h
 	g++ tests.cpp -g -c
 #
 carre.o: carre.cpp carre.h coordonnee.h rectangle.h forme.h

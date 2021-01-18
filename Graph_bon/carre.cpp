@@ -4,7 +4,6 @@
 
 #include "carre.h"
 #include <iostream>
-#include "coordonnee.h"
 
 using namespace std;
 
@@ -44,11 +43,11 @@ double carre::aire()
 }
 
 
-
-
 void carre::afficher(ostream & s)
 {
-	s << "le carre avec la largeur : " << large << endl;
+	s << "Carre(";
+	ancrage.afficher(s);
+	s << "c="<< get_largeur() <<", aire=" << aire() << ")" << endl;
 }
 
 

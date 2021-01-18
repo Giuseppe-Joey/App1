@@ -2,6 +2,9 @@
  * Fichier: vecteur.h
  ********/
 
+#ifndef VECTEUR_H
+#define VECTEUR_H
+
 #include "forme.h"
 #include <iostream>
 
@@ -33,3 +36,5 @@ public:
   Forme* obtenir(int index);
   void afficher_vecteur(ostream & s);
 };
+
+#endif

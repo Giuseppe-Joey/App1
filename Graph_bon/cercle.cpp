@@ -40,14 +40,16 @@ int cercle::get_rayon()
 
 double cercle::aire()
 {
-	return ((ray*ray)*3,141592653);
+	return (ray*ray)*3.14;
 }
 
 
 
 void cercle::afficher(ostream & s)
 {
-	s << "Le rayon : " << get_rayon() << "\n Point d'ancrage =" <<"."<< endl;
+	s << "Cercle(";
+        ancrage.afficher(s);
+        s << "r=" << get_rayon() << ", aire=" << aire() << ")" << endl;
 	
 }
 

@@ -10,10 +10,21 @@
 #ifndef COORDONNEE_H
 #define COORDONNEE_H
 
+#include <iostream>
+
+using namespace std;
+
 struct Coordonnee
 {
    int x;
    int y;
+   
+   
+   void afficher(ostream& s)
+    {
+        s << "x=" << x << ", y=" << y << " ,";
+    }
+   
 };
 
 #endif

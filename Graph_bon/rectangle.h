@@ -2,6 +2,9 @@
  * Fichier: rectangle.h
 ********/
 
+#ifndef RECTANGLE_H
+#define RECTANGLE_H
+
 #include <iostream>
 #include "forme.h"
 #include "coordonnee.h"
@@ -32,4 +35,4 @@ public:
 	void afficher(ostream & s);
 };
 
-
+#endif

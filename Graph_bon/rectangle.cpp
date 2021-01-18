@@ -4,7 +4,6 @@
 
 #include "rectangle.h"
 #include <iostream>
-#include "coordonnee.h"
 
 using namespace std;
 
@@ -57,7 +56,10 @@ double rectangle::aire()
 
 void rectangle::afficher(ostream & s)
 {
-	s << "Rectangle (" << large << "et la hauteur" << haut << endl;
+	s << "Rectangle(";
+	ancrage.afficher(s);
+        s << "l=" << get_largeur() << ", h=" << get_hauteur() << ", aire=" << aire() << ")" << std::endl;
+    
 }
 
 

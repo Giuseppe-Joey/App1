@@ -9,6 +9,13 @@
 
 #include <iostream>
 #include "canevas.h"
+#include "carre.h"
+#include "cercle.h"
+#include "rectangle.h"
+#include "vecteur.h"
+
+
+
 
 using namespace std;
 

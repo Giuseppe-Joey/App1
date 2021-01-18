@@ -42,7 +42,7 @@ class Couche
     bool AjoutForme(Forme* f);
     Forme* RetireForme(int index);
     Forme* ObtenirForme(int index);
-    double Aire();
+    double aire();
     bool Translater(int x, int y);
     bool Reinitialiser();
     void SetEtat(Etat lEtat);

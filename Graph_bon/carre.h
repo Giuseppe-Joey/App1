@@ -2,9 +2,11 @@
  * Fichier: carre.h
 ********/
 
+#ifndef CARRE_H
+#define CARRE_H
+
 #include <iostream>
 #include "rectangle.h"
-#include "coordonnee.h"
 
 using namespace std;
 
@@ -26,6 +28,7 @@ public:
 	void set_largeur(int l);
 	int get_largeur();
 	double aire();
-	double afficher_aire();
 	void afficher(ostream & s);
 };
+
+#endif

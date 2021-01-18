@@ -6,14 +6,17 @@
  *    fichier fait partie de la distribution de Graphicus.
 ********/
 #include "tests.h"
+#include "vecteur.h"
 
 using namespace std;
 
 int main()
 {
-   Tests tests;
+   	Tests tests;
    
-   tests.tests_application();
+  
+	tests.tests_unitaires();
+   	tests.tests_application();
    return 0;
 }
 
