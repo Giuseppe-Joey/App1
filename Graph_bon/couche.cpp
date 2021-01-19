@@ -24,8 +24,9 @@ bool Couche::AjoutForme(Forme* f)
 	
 	if(getEtat() == Etat::Active)
 	{
-	return v.ajout(f);
+		return v.ajout(f);
 	}
+	
 	return false;
 	
 }
@@ -42,13 +43,18 @@ Forme* Couche::ObtenirForme(int index)
 
 double Couche::aire()
 {
-	double airTotal;
+	double airTotal = 0.0;
+	
+	if (getEtat() == Etat::Cachee)
+	{
+		return airTotal;
+	}
+	
 	
 	for(int i=0; i < v.get_size(); i++)
-        {
-
-            airTotal += v.obtenir(i)->aire();
-        } 
+        {	
+            	airTotal += v.obtenir(i)->aire();
+	}
 	
 	return airTotal;
 }

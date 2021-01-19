@@ -319,7 +319,7 @@ void Tests::tests_application_cas_01()
    
    std::cout <<"# 19 Aire du Canevas"<<endl;
    std::cout <<"l'aire est:"<<endl;
-   std::cout <<"0"<<endl;
+   std::cout << ca.aire() <<endl;
    std::cout << endl;
    
    

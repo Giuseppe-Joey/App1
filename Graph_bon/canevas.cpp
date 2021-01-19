@@ -88,15 +88,15 @@ bool Canevas::retirerForme(int index)
 
 double Canevas::aire()
 {
-	double aireTolal=0.0;
+	double aireTolal = 0.0;
 	
-	for(int i=0; i < MAX_COUCHES; i++)
+	for(int i = 0; i < MAX_COUCHES; i++)
         {
 
             aireTolal += couches[i].aire();
         } 
 	
-	return aireTolal/3;
+	return aireTolal;
 }
 
 bool Canevas::translater(int deltaX, int deltaY)

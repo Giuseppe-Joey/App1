@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>20</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>1520</y>
+      <w>840</w>
+      <h>440</h>
+    </coordinates>
+    <panel_attributes>Cercle
+
+--
+-ray : integer
+
+--
++cercle()
++cercle(rayon :integer, AngrageX : integer, AngrageY: integer)
++~cercle()
+
++set_rayon(r :integer) : void
++get_rayon(): integer
++aire() :double
++afficher(ostream &amp; s) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>860</y>
+      <w>840</w>
+      <h>520</h>
+    </coordinates>
+    <panel_attributes>Carre
+
+--
+-large : integer
+
+
+--
++carre()
++carre(largeur : integer, AngrageX : integer, AngrageY : integer)
++~carre()
+
++set_largeur(l : integer) : void
++get_largeur() : integer
++aire() : double
++afficher_aire() : double
++afficher(ostream &amp; s) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>100</y>
+      <w>1120</w>
+      <h>540</h>
+    </coordinates>
+    <panel_attributes>Rectangle
+
+--
+-large : integer
+-haut : integer
+
+--
++rectangle()
++rectangle(largeur : integer, hauteur : integer, AngrageX : integer, AngrageY : integer)
++~rectangle()
+
++set_largeur(l : integer) : void
++set_hauteur(h : integer) : void
++get_largeur() : integer
++get_hauteur() : integer
++aire() : double
++afficher(ostream &amp; s) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1520</x>
+      <y>920</y>
+      <w>720</w>
+      <h>480</h>
+    </coordinates>
+    <panel_attributes>{abstract}
+Forme
+
+--
+
++Forme (x : integer, y : integer) 
++~Forme() : virtual
++translater(deltaX : integer, deltaY : integer) : void
++get_ancrage() : Coordonnee
++setAncrage(c : Coordonnee) : void
++aire(): virtual double {abstract}
++afficher(ostream &amp; s) : virtual void {abstract}
+
+#ancrage : Coordonnee</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2700</x>
+      <y>20</y>
+      <w>800</w>
+      <h>660</h>
+    </coordinates>
+    <panel_attributes>Couche
+
+--
+-v : vecteur
+-unEtat : Etat
+
++Etat {Initialisee, Active, Inactive, Cachee} : enumeration
+
+--
+
++Couche() 
++~Couche()
++AjoutForme(f : *Forme) : boolean
++RetirerForme(index : integer) : *Forme
++ObtenirForme(index : integer) : *Forme
++Aire() : double
++Translater(x : integer, y :integer) : boolean
++Renitialiser() : boolean
++SetEtat(LEtat : Etat) : void
++getEtat() : Etat
++affficher(ostream &amp; s) : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1920</x>
+      <y>1620</y>
+      <w>780</w>
+      <h>700</h>
+    </coordinates>
+    <panel_attributes>Tests
+
+--
++tests_unitaires_formes() : void
++tests_unitaires_vecteur() : void
++tests_unitaires_couche() : void
++tests_unitaires_canavas() : void
++tests_unitaires() : void
+
++tests_application_cas_01() : void
++tests_application_cas_02() : void
++tests_application() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1340</x>
+      <y>20</y>
+      <w>1140</w>
+      <h>620</h>
+    </coordinates>
+    <panel_attributes>Vecteurs
+
+--
+-taille : integer
+-capacity : integer
+-tableau : **Forme
+
+--
+
++vecteur() 
++~vecteur()
++get_capacity() : integer
++get_size() : integer
++add_capacity() : boolean
++vider() : void
++vecteur_vide() : boolean
++ajout(valeur : *Forme) : boolean
++retrait(index : integer) : *Forme
++obtenir(index : integer) : *Forme
++afficher_vecteur(ostream &amp; s) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2680</x>
+      <y>920</y>
+      <w>780</w>
+      <h>560</h>
+    </coordinates>
+    <panel_attributes>Canevas
+
+--
+
++Canevas()
++~Canevas()
++reinitialier() : boolean
++activerCouche(index : integer) : boolean
++cacherCouche(index : integer) : boolean
++ajouterForme(p_forme : *Forme)  :boolean
++retirerFormer(index : integer) : boolean
++aire() : double
++translater(deltaX : integer, deltatY : integer)  : boolean
++afficher(ostream &amp; s) : void
+
+-couche[MAX_COUCHES] : Couche
+-c : Couche</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1240</x>
+      <y>960</y>
+      <w>320</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>620</y>
+      <w>60</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>1260</w>
+      <h>2040</h>
+    </coordinates>
+    <panel_attributes>Packetage_Geometrie</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1860</x>
+      <y>620</y>
+      <w>60</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2460</x>
+      <y>160</y>
+      <w>280</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2940</x>
+      <y>660</y>
+      <w>60</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3160</x>
+      <y>1760</y>
+      <w>180</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;70.0;40.0</additional_attributes>
+  </element>
+</diagram>
