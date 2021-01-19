@@ -25,8 +25,10 @@ Canevas::~Canevas()
 bool Canevas::reinitialiser()
 {
    
-	
-	cou.Reinitialiser();
+	for(int i=0; i < MAX_COUCHES; i++)
+  	{
+		couches[i].Reinitialiser();
+	}
 	return true;
 	
 }
@@ -94,18 +96,22 @@ double Canevas::aire()
 	for(int i=0; i < MAX_COUCHES; i++)
         {
 
-            aireTolal += couches[i].ObtenirForme(i)->aire();
+            aireTolal += couches[i].aire();
         } 
 	
-	return aireTolal;
+	return aireTolal/3;
 }
 
 bool Canevas::translater(int deltaX, int deltaY)
 {
 
-    if(cou.getEtat() == Couche::Etat::Active)
-    {
-        return cou.Translater(deltaX, deltaY);
+    
+        for(int i = 0; i < MAX_COUCHES; i++)
+		{
+			if(couches[i].getEtat() == Couche::Etat::Active)
+    		{
+			return couches[i].Translater(deltaX, deltaY);
+			}
     }
    return true;
 }

@@ -37,7 +37,7 @@ void Tests::tests_unitaires_vecteur()
    // Tests sur la classe Vecteur
    
    
-   /*std::cout <<"Les vecteurs"<<endl;
+   std::cout <<"Les vecteurs"<<endl;
    std::cout << endl;
    
    vecteur v1;
@@ -83,7 +83,7 @@ void Tests::tests_unitaires_vecteur()
    v1.afficher_vecteur(std::cout);
    
    std::cout << endl;
-   std::cout <<"________________________________"<<endl;*/
+   std::cout <<"________________________________"<<endl;
    
    
 }
@@ -223,7 +223,7 @@ void Tests::tests_application_cas_01()
 
    
    
-   cout << "TESTS APPLICATION (CAS 01)" << endl;
+   /*cout << "TESTS APPLICATION (CAS 01)" << endl;
     
    std::cout <<"Scénario de validation"<<endl;
    std::cout << endl;
@@ -231,95 +231,99 @@ void Tests::tests_application_cas_01()
    //ca.afficher(std::cout);
    //std::cout << endl;
    
-   std::cout <<"Activer la couche 1"<<endl;
+   std::cout <<"# 1 Activer la couche 1"<<endl;
    ca.activerCouche(1);
-   ca.afficher(std::cout);
    std::cout << endl;
    
-   std::cout <<"Ajouter 3 formes géométriques"<<endl;
+   std::cout <<"# 2 Ajouter 3 formes géométriques"<<endl;
+   std::cout <<"Les formes ajoutés sont les suivante: carre c1(4,1,4) , rectangle (2,3,5,6), cercle (2,7,10)"<<endl;
+   
    ca.ajouterForme(&c1);
    ca.ajouterForme(&r1);
    ca.ajouterForme(&ce1);
    std::cout << endl;
+   std::cout << endl;
    
-   std::cout <<"Activer couche 2"<<endl;
+   std::cout <<"#3 Activer couche 2 "<<endl;
    ca.activerCouche(2);
-   ca.afficher(std::cout);
    std::cout << endl;
    
-   std::cout <<"Ajouter une forme"<<endl;
+   std::cout <<"#4 Ajouter une forme"<<endl;
+   std::cout <<"La forme ajouté est :  cercle(6,1,1)"<<endl;
    ca.ajouterForme(&ce6);
+
+   std::cout << endl;
+   
+   std::cout <<"#5 Afficher le canevas"<<endl;
    ca.afficher(std::cout);
    std::cout << endl;
    
-   std::cout <<"Ajouter une forme"<<endl;
-   ca.afficher(std::cout);
+   std::cout <<"#6 Aire du Canevas"<<endl;
+   std::cout <<"l'aire est:"<<endl;
+   std::cout << ca.aire() <<endl;
    std::cout << endl;
    
-   std::cout <<"Aire du Canevas"<<endl;
-   //std::cout << ca.aire() <<endl;
-   std::cout << endl;
-   
-   std::cout <<"Activer couche 0"<<endl;
+   std::cout <<"#7 Activer couche 0"<<endl;
    ca.activerCouche(0);
-   ca.afficher(std::cout);
    std::cout << endl;
    
-   std::cout <<"Ajouter 3 formes géométriques différentes"<<endl;
+   std::cout <<"#8 Ajouter 3 formes géométriques différentes"<<endl;
+   std::cout <<"Les formes ajoutés sont les suivante:carre(6,2,4), rectangle(1,10,2,7), cercle(7,0,3);"<<endl;
    ca.ajouterForme(&c2);
    ca.ajouterForme(&r2);
    ca.ajouterForme(&ce3);
    std::cout << endl;
    
-   std::cout <<"Cacher la couche 2"<<endl;
+   std::cout <<"#9 Cacher la couche 2"<<endl;
    ca.cacherCouche(2);
-   ca.afficher(std::cout);
    std::cout << endl;
    
-   std::cout <<"Activer la couche 1"<<endl;
+   std::cout <<"#10 Activer la couche 1"<<endl;
    ca.activerCouche(1);
-   ca.afficher(std::cout);
    std::cout << endl;
    
-   std::cout <<"Translater la couche 1"<<endl;
+   std::cout <<"#11 Translater la couche 1"<<endl;
+   std::cout <<"les valeurs utiliser sont x=4, y=5"<<endl;
    ca.translater(4, 5);
-   std::cout << ca.translater(4, 5) <<endl;
+   std::cout << endl;
+   
+   std::cout <<"# 12 Afficher le canevas"<<endl;
    ca.afficher(std::cout);
    std::cout << endl;
    
-   std::cout <<"Afficher le canevas"<<endl;
-   ca.afficher(std::cout);
+   std::cout <<"#13 Aire du Canevas"<<endl;
+   std::cout <<"l'aire est:"<<endl;
+   std::cout << ca.aire() <<endl;
    std::cout << endl;
-   
-   std::cout <<"Aire du Canevas"<<endl;
-   //std::cout << ca.aire() <<endl;
-   std::cout << endl;
-   
-   std::cout <<"Retirer la première forme de la couche"<<endl;
+
+   std::cout <<"# 14 Retirer la première forme de la couche"<<endl;
    ca.retirerForme(0);
+   std::cout << endl;
+   
+   std::cout <<"# 15 Afficher le canevas"<<endl;
    ca.afficher(std::cout);
    std::cout << endl;
    
-   std::cout <<"Afficher le canevas"<<endl;
-   ca.afficher(std::cout);
+   std::cout <<"#16 Aire du Canevas"<<endl;
+   std::cout <<"l'aire est:"<<endl;
+   std::cout << ca.aire() <<endl;
    std::cout << endl;
    
-   std::cout <<"Aire du Canevas"<<endl;
-   //std::cout << ca.aire() <<endl;
-   std::cout << endl;
-   
-   std::cout <<"Réinitialiser le canevas"<<endl;
+   std::cout <<"#17 Réinitialiser le canevas"<<endl;
    ca.reinitialiser();
-   std::cout << ca.reinitialiser() <<endl;
    std::cout << endl;
    
-   std::cout <<"Afficher le canevas"<<endl;
+   std::cout <<"#18 Afficher le canevas"<<endl;
    ca.afficher(std::cout);
    std::cout << endl;
    
-   std::cout <<"Aire du Canevas"<<endl;
-   //std::cout << ca.aire() <<endl;
+   std::cout <<"# 19 Aire du Canevas"<<endl;
+   std::cout <<"l'aire est:"<<endl;
+   std::cout <<"0"<<endl;
    std::cout << endl;
+   
+   
+   std::cout <<"FIN DU PROGRAMME"<<endl; */
     
 }
 

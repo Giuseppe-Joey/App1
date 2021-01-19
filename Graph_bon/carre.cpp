@@ -47,7 +47,7 @@ double carre::aire()
 void carre::afficher(ostream & s)
 {
 	s << "Carre(";
-	ancrage.afficher(s);
+	//ancrage.afficher(s);
 	s << "c="<< get_largeur() <<", aire=" << aire() << ")" << endl;
 }
 
