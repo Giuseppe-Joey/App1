@@ -9,14 +9,14 @@ using namespace std;
 
 carre::carre()
 {
-	  large = 1;
 	  ancrage.x = 0;
 	  ancrage.y = 0;
 }
 
-carre::carre(int largeur,  int AngrageX, int AngrageY)
+carre::carre(int cote,  int AngrageX, int AngrageY)
 {
-	  large = largeur;
+	  large = cote;
+	  haut = cote;
 	  ancrage.x = AngrageX;
 	  ancrage.y = AngrageY;
 }
@@ -25,13 +25,14 @@ carre::~carre()
 {
 }
 
-void carre::set_largeur(int l)
+void carre::set_cote(int c)
 {
-  	large = l;	
+  	large = c;
+  	haut = c;	
 }
 
 
-int carre::get_largeur()
+int carre::get_cote()
 {
   	return large;	
 }
@@ -39,7 +40,7 @@ int carre::get_largeur()
 
 double carre::aire()
 {
-	return (large * large);
+	return (large * haut);
 }
 
 

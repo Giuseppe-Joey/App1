@@ -14,7 +14,7 @@ using namespace std;
 class rectangle : public Forme
 {
 
-private:
+protected:
 //attribut
 	int large;
 	int haut;

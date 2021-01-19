@@ -41,7 +41,7 @@ public:
 private:
      Couche couches[MAX_COUCHES];
      Couche cou;
-     int lindex = 0;
+     //int lindex = 0;
 };
 
 #endif

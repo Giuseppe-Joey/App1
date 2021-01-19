@@ -48,7 +48,7 @@ double Couche::aire()
 
 bool Couche::Translater(int x, int y)
 {
-        if(v.vecteur_vide()==true)
+    if(v.get_size() == 0)
 	{
 		return false;		
 	}
@@ -59,13 +59,13 @@ bool Couche::Translater(int x, int y)
 
             		v.obtenir(i)->translater(x,y);
         	}
-        	  return true; 				
+        return true; 				
 	}				
 }
 
 bool Couche::Reinitialiser()
 {
-	if(v.vecteur_vide()==true)
+	if(v.get_size() == 0)
 	{
 		return false;		
 	}
@@ -77,9 +77,10 @@ bool Couche::Reinitialiser()
 	}			
 }
 
-void Couche::SetEtat(Etat lEtat)
+bool Couche::SetEtat(Etat lEtat)
 {
 	unEtat = lEtat;
+	return true;
 }
 
 Couche::Etat Couche::getEtat()
@@ -90,28 +91,25 @@ Couche::Etat Couche::getEtat()
 void Couche::afficher(ostream & s)
 {
 	if(unEtat != Etat::Initialisee)
-    {
-		if(v.get_size() == 0)
+	{
+		
+		if(unEtat == Etat::Cachee)
 		{
-			    s << "Couche vide" << endl;
+			s << "Couche cachee" << endl;
+		}
+		else if(v.get_size() == 0 && unEtat != Etat::Cachee)
+		{
+			s << "Couche vide" << endl;
 		}
 		else
-		{
-			if(unEtat != Etat::Cachee)
-			{
-				s << "Couche cachee" << endl;
-			}
-			else
-			{
-			   v.afficher_vecteur(s);
-			}
-		}
-    }		
-    else
-    {
-        v.afficher_vecteur(s);
-        //s << "Couche initialisee" << endl;
-    }
+		{	
+			v.afficher_vecteur(s);
+		}		
+	}
+	else 
+	{
+		s << "Couche Initialisée" << endl;
+	}
 		
 }
 
