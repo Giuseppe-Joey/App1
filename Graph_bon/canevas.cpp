@@ -13,11 +13,18 @@ using namespace std;
 
 Canevas::Canevas()
 {
+	couches[0].SetEtat(Couche::Etat::Active);
 }
+
+
+
 
 Canevas::~Canevas()
 {
 }
+
+
+
 
 bool Canevas::reinitialiser()
 {
@@ -26,9 +33,17 @@ bool Canevas::reinitialiser()
   	{
 		couches[i].Reinitialiser();
 	}
+	
+	couches[0].SetEtat(Couche::Etat::Active);
+	
 	return true;
 	
 }
+
+
+
+
+
 
 bool Canevas::activerCouche(int index)
 {
@@ -50,6 +65,11 @@ bool Canevas::activerCouche(int index)
    
 }
 
+
+
+
+
+
 bool Canevas::cacherCouche(int index)
 {
 	if(index > MAX_COUCHES)
@@ -60,6 +80,10 @@ bool Canevas::cacherCouche(int index)
    couches[index].SetEtat(Couche::Etat::Cachee);
    return true;
 }
+
+
+
+
 
 bool Canevas::ajouterForme(Forme *p_forme)
 {
@@ -74,6 +98,10 @@ bool Canevas::ajouterForme(Forme *p_forme)
    return false;
 }
 
+
+
+
+
 bool Canevas::retirerForme(int index)
 {
    for(int i=0; i < MAX_COUCHES; i++)
@@ -85,6 +113,9 @@ bool Canevas::retirerForme(int index)
    }
    return false;
 }
+
+
+
 
 double Canevas::aire()
 {
@@ -99,19 +130,27 @@ double Canevas::aire()
 	return aireTolal;
 }
 
+
+
+
 bool Canevas::translater(int deltaX, int deltaY)
 {
 
     
         for(int i = 0; i < MAX_COUCHES; i++)
-		{
-			if(couches[i].getEtat() == Couche::Etat::Active)
+	{
+		if(couches[i].getEtat() == Couche::Etat::Active)
     		{
 			return couches[i].Translater(deltaX, deltaY);
-			}
-    }
-   return true;
+		}	
+    	}
+    	
+   	return true;
 }
+
+
+
+
 
 void Canevas::afficher(ostream & s)
 { 
@@ -122,3 +161,10 @@ void Canevas::afficher(ostream & s)
 	}
 	
 }
+
+
+
+
+
+
+

@@ -19,6 +19,14 @@ Rectangle::Rectangle()
 
 Rectangle::Rectangle(int largeur, int hauteur,  int AngrageX, int AngrageY)
 {
+	if(largeur < 0)
+	largeur *= (-1);
+	
+	
+	if(hauteur < 0)
+	hauteur *= (-1);
+
+	
 	  large = largeur;
 	  haut = hauteur;
 	  ancrage.x = AngrageX;
@@ -31,11 +39,19 @@ Rectangle::~Rectangle()
 
 void Rectangle::set_largeur(int l)
 {
+	if(l < 0)
+	l *= (-1);
+	
+	
   	large = l;	
 }
 
 void Rectangle::set_hauteur(int h)
 {
+	if(h < 0)
+	h *= (-1);
+	
+	
   	haut = h;	
 }
 

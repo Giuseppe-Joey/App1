@@ -211,9 +211,9 @@ void Tests::tests_application()
 void Tests::tests_application_cas_01()
 {
    Canevas ca;
-   Carre c1(4,1,4);
-   Rectangle r1(2,3,5,6);
-   Cercle ce1(2,7,10);
+   Carre c1(-4,1,4);
+   Rectangle r1(-2,3,5,6);
+   Cercle ce1(-2,7,10);
    
    Cercle ce6(6,1,1);
    
@@ -230,6 +230,10 @@ void Tests::tests_application_cas_01()
    
    //ca.afficher(std::cout);
    //std::cout << endl;
+   
+   std::cout << "#0 Etat de la couche 0" << endl;
+   ca.afficher(std::cout);
+   std::cout << endl;
    
    std::cout <<"# 1 Activer la couche 1"<<endl;
    ca.activerCouche(1);
@@ -292,8 +296,7 @@ void Tests::tests_application_cas_01()
    std::cout << endl;
    
    std::cout <<"#13 Aire du Canevas"<<endl;
-   std::cout <<"l'aire est:"<<endl;
-   std::cout << ca.aire() <<endl;
+   std::cout <<"l'aire est:" << ca.aire() <<endl;
    std::cout << endl;
 
    std::cout <<"# 14 Retirer la première forme de la couche"<<endl;
@@ -305,8 +308,7 @@ void Tests::tests_application_cas_01()
    std::cout << endl;
    
    std::cout <<"#16 Aire du Canevas"<<endl;
-   std::cout <<"l'aire est:"<<endl;
-   std::cout << ca.aire() <<endl;
+   std::cout <<"l'aire est :" << ca.aire() <<endl;
    std::cout << endl;
    
    std::cout <<"#17 Réinitialiser le canevas"<<endl;
@@ -318,8 +320,7 @@ void Tests::tests_application_cas_01()
    std::cout << endl;
    
    std::cout <<"# 19 Aire du Canevas"<<endl;
-   std::cout <<"l'aire est:"<<endl;
-   std::cout << ca.aire() <<endl;
+   std::cout <<"l'aire totale est :" << ca.aire() << endl;
    std::cout << endl;
    
    

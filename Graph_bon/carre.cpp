@@ -15,6 +15,10 @@ Carre::Carre()
 
 Carre::Carre(int cote,  int AngrageX, int AngrageY)
 {
+	if(cote <  0)
+	cote *= (-1);
+	
+	
 	  large = cote;
 	  haut = cote;
 	  ancrage.x = AngrageX;
@@ -27,6 +31,10 @@ Carre::~Carre()
 
 void Carre::set_cote(int c)
 {
+	if(c < 0)
+	c *= (-1);
+	
+	
   	large = c;
   	haut = c;	
 }
