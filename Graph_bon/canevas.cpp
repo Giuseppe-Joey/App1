@@ -13,9 +13,6 @@ using namespace std;
 
 Canevas::Canevas()
 {
-
-	//cou.SetEtat(Couche::Etat::Cachee);
-
 }
 
 Canevas::~Canevas()

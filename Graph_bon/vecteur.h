@@ -10,7 +10,7 @@
 
 using namespace std;
 
-class vecteur 
+class Vecteur 
 {
 
 private:
@@ -22,8 +22,8 @@ private:
 
 public:
   // constructeur
-  vecteur();
-  ~vecteur();
+  Vecteur();
+  ~Vecteur();
 
   // method
   int get_capacity();

@@ -7,13 +7,13 @@
 
 using namespace std;
 
-carre::carre()
+Carre::Carre()
 {
 	  ancrage.x = 0;
 	  ancrage.y = 0;
 }
 
-carre::carre(int cote,  int AngrageX, int AngrageY)
+Carre::Carre(int cote,  int AngrageX, int AngrageY)
 {
 	  large = cote;
 	  haut = cote;
@@ -21,34 +21,33 @@ carre::carre(int cote,  int AngrageX, int AngrageY)
 	  ancrage.y = AngrageY;
 }
 
-carre::~carre()
+Carre::~Carre()
 {
 }
 
-void carre::set_cote(int c)
+void Carre::set_cote(int c)
 {
   	large = c;
   	haut = c;	
 }
 
 
-int carre::get_cote()
+int Carre::get_cote()
 {
   	return large;	
 }
 
 
-double carre::aire()
+double Carre::aire()
 {
 	return (large * haut);
 }
 
 
-void carre::afficher(ostream & s)
+void Carre::afficher(ostream & s)
 {
 	s << "Carre(";
-	//ancrage.afficher(s);
-	s << "c="<< get_largeur() <<", aire=" << aire() << ")" << endl;
+	s << "c="<< get_largeur() << ", x=" << ancrage.x << ", y=" << ancrage.y << ", aire=" << aire() << ")" << endl;
 }
 
 

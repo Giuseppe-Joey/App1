@@ -19,12 +19,6 @@ struct Coordonnee
    int x;
    int y;
    
-   
-   void afficher(ostream& s)
-    {
-        s << "x=" << x << ", y=" << y << " ,";
-    }
-   
 };
 
 #endif

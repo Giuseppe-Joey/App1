@@ -10,14 +10,14 @@
 
 using namespace std;
 
-class carre : public rectangle
+class Carre : public Rectangle
 {
 
 public:
 //constructeur
-	carre();
-	carre(int cote, int AngrageX, int AngrageY);
-	~carre();
+	Carre();
+	Carre(int cote, int AngrageX, int AngrageY);
+	~Carre();
 	
 //fonction
 	void set_cote(int c);

@@ -11,7 +11,7 @@
 
 using namespace std;
 
-class cercle : public Forme
+class Cercle : public Forme
 {
 
 private:
@@ -21,9 +21,9 @@ private:
 
 public:
 //constructeur
-	cercle();
-	cercle(int rayon, int AngrageX, int AngrageY);
-	~cercle();
+	Cercle();
+	Cercle(int rayon, int AngrageX, int AngrageY);
+	~Cercle();
 	
 //fonction
 	void set_rayon(int r);

@@ -16,9 +16,9 @@ void Tests::tests_unitaires_formes()
    /*std::cout <<"Les formes"<<endl;
    std::cout << endl;
    
-   carre car(2,1,5);
-   rectangle rec(2,3,1,1);
-   cercle cer(2,1,1);
+   Carre car(2,1,5);
+   Rectangle rec(2,3,1,1);
+   Cercle cer(2,1,1);
    
    car.afficher(std::cout);
    cer.afficher(std::cout);
@@ -37,15 +37,15 @@ void Tests::tests_unitaires_vecteur()
    // Tests sur la classe Vecteur
    
    
-   std::cout <<"Les vecteurs"<<endl;
+   /*std::cout <<"Les vecteurs"<<endl;
    std::cout << endl;
    
-   vecteur v1;
-   carre c1(2,1,4);
-   rectangle r1(2,3,1,1);
-   rectangle r2(2,6,1,1);
-   cercle ce1(2,1,1);
-   cercle ce6(6,1,1);
+   Vecteur v1;
+   Carre c1(2,1,4);
+   Rectangle r1(2,3,1,1);
+   Rectangle r2(2,6,1,1);
+   Cercle ce1(2,1,1);
+   Cercle ce6(6,1,1);
    
    
    v1.ajout(&c1);
@@ -83,7 +83,7 @@ void Tests::tests_unitaires_vecteur()
    v1.afficher_vecteur(std::cout);
    
    std::cout << endl;
-   std::cout <<"________________________________"<<endl;
+   std::cout <<"________________________________"<<endl;*/
    
    
 }
@@ -94,11 +94,11 @@ void Tests::tests_unitaires_couche()
    std::cout << endl;
    
    Couche c;
-   carre c1(4,1,4);
-   rectangle r1(2,3,1,1);
-   rectangle r2(2,6,1,1);
-   cercle ce1(2,1,1);
-   cercle ce6(6,1,1);
+   Carre c1(4,1,4);
+   Rectangle r1(2,3,1,1);
+   Rectangle r2(2,6,1,1);
+   Cercle ce1(2,1,1);
+   Cercle ce6(6,1,1);
    
    c.SetEtat(Couche::Etat::Active);
    std::cout << c.SetEtat(Couche::Etat::Active) <<endl;
@@ -146,11 +146,11 @@ void Tests::tests_unitaires_canevas()
    std::cout << endl;
    
    Canevas ca;
-   carre c1(4,1,4);
-   rectangle r1(2,3,1,1);
-   rectangle r2(2,6,1,1);
-   cercle ce1(2,1,1);
-   cercle ce6(6,1,1);
+   Carre c1(4,1,4);
+   Rectangle r1(2,3,1,1);
+   Rectangle r2(2,6,1,1);
+   Cercle ce1(2,1,1);
+   Cercle ce6(6,1,1);
    
    ca.afficher(std::cout);
    
@@ -211,19 +211,19 @@ void Tests::tests_application()
 void Tests::tests_application_cas_01()
 {
    Canevas ca;
-   carre c1(4,1,4);
-   rectangle r1(2,3,5,6);
-   cercle ce1(2,7,10);
+   Carre c1(4,1,4);
+   Rectangle r1(2,3,5,6);
+   Cercle ce1(2,7,10);
    
-   cercle ce6(6,1,1);
+   Cercle ce6(6,1,1);
    
-   carre c2(6,2,4);
-   rectangle r2(1,10,2,7);
-   cercle ce3(7,0,3);
+   Carre c2(6,2,4);
+   Rectangle r2(1,10,2,7);
+   Cercle ce3(7,0,3);
 
    
    
-   /*cout << "TESTS APPLICATION (CAS 01)" << endl;
+   cout << "TESTS APPLICATION (CAS 01)" << endl;
     
    std::cout <<"Scénario de validation"<<endl;
    std::cout << endl;
@@ -323,7 +323,7 @@ void Tests::tests_application_cas_01()
    std::cout << endl;
    
    
-   std::cout <<"FIN DU PROGRAMME"<<endl; */
+   std::cout <<"FIN DU PROGRAMME"<<endl; 
     
 }
 

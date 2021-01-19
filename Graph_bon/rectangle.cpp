@@ -8,7 +8,7 @@
 using namespace std;
 
 
-rectangle::rectangle()
+Rectangle::Rectangle()
 {
 	  large = 1;
 	  haut = 1;
@@ -17,7 +17,7 @@ rectangle::rectangle()
 	  
 }
 
-rectangle::rectangle(int largeur, int hauteur,  int AngrageX, int AngrageY)
+Rectangle::Rectangle(int largeur, int hauteur,  int AngrageX, int AngrageY)
 {
 	  large = largeur;
 	  haut = hauteur;
@@ -25,40 +25,39 @@ rectangle::rectangle(int largeur, int hauteur,  int AngrageX, int AngrageY)
 	  ancrage.y = AngrageY;
 }
 
-rectangle::~rectangle()
+Rectangle::~Rectangle()
 {
 }
 
-void rectangle::set_largeur(int l)
+void Rectangle::set_largeur(int l)
 {
   	large = l;	
 }
 
-void rectangle::set_hauteur(int h)
+void Rectangle::set_hauteur(int h)
 {
   	haut = h;	
 }
 
-int rectangle::get_largeur()
+int Rectangle::get_largeur()
 {
   	return large;	
 }
 
-int rectangle::get_hauteur()
+int Rectangle::get_hauteur()
 {
   	return haut;	
 }
 
-double rectangle::aire()
+double Rectangle::aire()
 {
 	return (large * haut);
 }
 
-void rectangle::afficher(ostream & s)
+void Rectangle::afficher(ostream & s)
 {
 	s << "Rectangle(";
-	ancrage.afficher(s);
-        s << "l=" << get_largeur() << ", h=" << get_hauteur() << ", aire=" << aire() << ")" << std::endl;
+        s << "l=" << get_largeur() << ", h=" << get_hauteur() << ", x=" << ancrage.x << ", y=" << ancrage.y<<  ", aire=" << aire() << ")" << std::endl;
     
 }
 

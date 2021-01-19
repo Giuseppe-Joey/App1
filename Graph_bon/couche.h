@@ -30,7 +30,7 @@ class Couche
     	};
 
     private:
-    	vecteur v;
+    	Vecteur v;
     	Etat unEtat;
     	
     public:

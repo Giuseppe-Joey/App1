@@ -11,7 +11,7 @@
 
 using namespace std;
 
-class rectangle : public Forme
+class Rectangle : public Forme
 {
 
 protected:
@@ -22,9 +22,9 @@ protected:
 
 public:
 //constructeur
-	rectangle();
-	rectangle(int largeur, int hauteur, int AngrageX, int AngrageY);
-	~rectangle();
+	Rectangle();
+	Rectangle(int largeur, int hauteur, int AngrageX, int AngrageY);
+	~Rectangle();
 	
 //fonction
 	void set_largeur(int l);

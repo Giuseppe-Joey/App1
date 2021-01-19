@@ -7,30 +7,30 @@
 
 using namespace std;
 
-vecteur::vecteur() 
+Vecteur::Vecteur() 
 {
   taille = 0;
   capacity = 10;
   tableau = new Forme*[capacity];
 }
 
-vecteur::~vecteur() 
+Vecteur::~Vecteur() 
 {
 vider();
 delete[] tableau;
 }
 
-int vecteur::get_capacity() 
+int Vecteur::get_capacity() 
 { 
 return capacity; 
 }
 
-int vecteur::get_size() 
+int Vecteur::get_size() 
 { 
 return taille; 
 }
 
-bool vecteur::add_capacity() 
+bool Vecteur::add_capacity() 
 {
   Forme **newTab = new Forme*[capacity*2];
   
@@ -54,7 +54,7 @@ bool vecteur::add_capacity()
 }
 
 
-void vecteur::vider() 
+void Vecteur::vider() 
 {
     delete[] tableau;
     tableau = new Forme *[capacity];
@@ -62,7 +62,7 @@ void vecteur::vider()
 }
 
 
-bool vecteur::vecteur_vide() {
+bool Vecteur::vecteur_vide() {
   
   if(taille == 0)
   {
@@ -76,7 +76,7 @@ bool vecteur::vecteur_vide() {
 }
 
 
-bool vecteur::ajout(Forme* valeur)
+bool Vecteur::ajout(Forme* valeur)
 {
 	bool verification = true;
 	
@@ -94,7 +94,7 @@ bool vecteur::ajout(Forme* valeur)
 		
 }
 
-Forme* vecteur::retrait(int index)
+Forme* Vecteur::retrait(int index)
 {
 	if(index > capacity)
 	{
@@ -115,7 +115,7 @@ Forme* vecteur::retrait(int index)
 }
 
 
-Forme* vecteur::obtenir(int index)
+Forme* Vecteur::obtenir(int index)
 {
 	Forme* ptrforme = tableau[index];
 	
@@ -129,7 +129,7 @@ Forme* vecteur::obtenir(int index)
 	}
 }
 
-void vecteur::afficher_vecteur(ostream & s)
+void Vecteur::afficher_vecteur(ostream & s)
 {
 	for(int i = 0; i < taille; i++)
 	{
