@@ -13,7 +13,7 @@ void Tests::tests_unitaires_formes()
 {
    // Tests sur les formes geometriques
    
-   std::cout <<"Les formes"<<endl;
+   /*std::cout <<"Les formes"<<endl;
    std::cout << endl;
    
    carre car(2,1,5);
@@ -25,7 +25,7 @@ void Tests::tests_unitaires_formes()
    rec.afficher(std::cout);
    
    std::cout << endl;
-   std::cout <<"________________________________"<<endl;
+   std::cout <<"________________________________"<<endl;*/
 
    
    
@@ -37,7 +37,7 @@ void Tests::tests_unitaires_vecteur()
    // Tests sur la classe Vecteur
    
    
-   std::cout <<"Les vecteurs"<<endl;
+   /*std::cout <<"Les vecteurs"<<endl;
    std::cout << endl;
    
    vecteur v1;
@@ -83,14 +83,14 @@ void Tests::tests_unitaires_vecteur()
    v1.afficher_vecteur(std::cout);
    
    std::cout << endl;
-   std::cout <<"________________________________"<<endl;
+   std::cout <<"________________________________"<<endl;*/
    
    
 }
 
 void Tests::tests_unitaires_couche()
 {
-   std::cout <<"Les couches"<<endl;
+  /* std::cout <<"Les couches"<<endl;
    std::cout << endl;
    
    Couche c;
@@ -134,7 +134,7 @@ void Tests::tests_unitaires_couche()
    
    
    std::cout << endl;
-   std::cout <<"________________________________"<<endl;
+   std::cout <<"________________________________"<<endl;*/
    
 }
 
@@ -142,7 +142,7 @@ void Tests::tests_unitaires_canevas()
 {
    // Tests sur la classe Canevas
    
-   std::cout <<"Les Canevas"<<endl;
+   /*std::cout <<"Les Canevas"<<endl;
    std::cout << endl;
    
    Canevas ca;
@@ -153,10 +153,20 @@ void Tests::tests_unitaires_canevas()
    cercle ce6(6,1,1);
    
    ca.afficher(std::cout);
+   
+   ca.activerCouche(0);
    ca.cacherCouche(2);
    
    std::cout << endl;
    ca.ajouterForme(&r2);
+   ca.ajouterForme(&r1);
+   ca.ajouterForme(&c1);
+   ca.ajouterForme(&ce1);
+   ca.afficher(std::cout);
+   std::cout <<"++++++++++"<<endl;
+   
+   std::cout << endl;
+   ca.retirerForme(0);
    ca.afficher(std::cout);
    
    std::cout << endl;
@@ -164,10 +174,22 @@ void Tests::tests_unitaires_canevas()
    std::cout << ca.reinitialiser() <<endl;
    ca.afficher(std::cout);
    
+   std::cout << endl;
+   ca.cacherCouche(2);
    std::cout << ca.cacherCouche(2) <<endl;
+   ca.afficher(std::cout);
+   
+   std::cout <<"+LLLLLLLLLLLl"<<endl;
+   std::cout << endl;
+   std::cout << ca.translater(4, 5) <<endl;
+   ca.afficher(std::cout);
+   
+   //std::cout <<"+LLLLLLLLLLLl"<<endl;
+   //std::cout << endl;
+   //std::cout << ca.aire() <<endl;
    
    std::cout << endl;
-   std::cout <<"________________________________"<<endl;
+   std::cout <<"________________________________"<<endl;*/
 }
 
 void Tests::tests_unitaires()
@@ -188,8 +210,117 @@ void Tests::tests_application()
 
 void Tests::tests_application_cas_01()
 {
-   cout << "TESTS APPLICATION (CAS 01)" << endl; 
-   // Il faut ajouter les operations realisant ce scenario de test.
+   Canevas ca;
+   carre c1(4,1,4);
+   rectangle r1(2,3,5,6);
+   cercle ce1(2,7,10);
+   
+   cercle ce6(6,1,1);
+   
+   carre c2(6,2,4);
+   rectangle r2(1,10,2,7);
+   cercle ce3(7,0,3);
+
+   
+   
+   cout << "TESTS APPLICATION (CAS 01)" << endl;
+    
+   std::cout <<"Scénario de validation"<<endl;
+   std::cout << endl;
+   
+   //ca.afficher(std::cout);
+   //std::cout << endl;
+   
+   std::cout <<"Activer la couche 1"<<endl;
+   ca.activerCouche(1);
+   ca.afficher(std::cout);
+   std::cout << endl;
+   
+   std::cout <<"Ajouter 3 formes géométriques"<<endl;
+   ca.ajouterForme(&c1);
+   ca.ajouterForme(&r1);
+   ca.ajouterForme(&ce1);
+   std::cout << endl;
+   
+   std::cout <<"Activer couche 2"<<endl;
+   ca.activerCouche(2);
+   ca.afficher(std::cout);
+   std::cout << endl;
+   
+   std::cout <<"Ajouter une forme"<<endl;
+   ca.ajouterForme(&ce6);
+   ca.afficher(std::cout);
+   std::cout << endl;
+   
+   std::cout <<"Ajouter une forme"<<endl;
+   ca.afficher(std::cout);
+   std::cout << endl;
+   
+   std::cout <<"Aire du Canevas"<<endl;
+   //std::cout << ca.aire() <<endl;
+   std::cout << endl;
+   
+   std::cout <<"Activer couche 0"<<endl;
+   ca.activerCouche(0);
+   ca.afficher(std::cout);
+   std::cout << endl;
+   
+   std::cout <<"Ajouter 3 formes géométriques différentes"<<endl;
+   ca.ajouterForme(&c2);
+   ca.ajouterForme(&r2);
+   ca.ajouterForme(&ce3);
+   std::cout << endl;
+   
+   std::cout <<"Cacher la couche 2"<<endl;
+   ca.cacherCouche(2);
+   ca.afficher(std::cout);
+   std::cout << endl;
+   
+   std::cout <<"Activer la couche 1"<<endl;
+   ca.activerCouche(1);
+   ca.afficher(std::cout);
+   std::cout << endl;
+   
+   std::cout <<"Translater la couche 1"<<endl;
+   ca.translater(4, 5);
+   std::cout << ca.translater(4, 5) <<endl;
+   ca.afficher(std::cout);
+   std::cout << endl;
+   
+   std::cout <<"Afficher le canevas"<<endl;
+   ca.afficher(std::cout);
+   std::cout << endl;
+   
+   std::cout <<"Aire du Canevas"<<endl;
+   //std::cout << ca.aire() <<endl;
+   std::cout << endl;
+   
+   std::cout <<"Retirer la première forme de la couche"<<endl;
+   ca.retirerForme(0);
+   ca.afficher(std::cout);
+   std::cout << endl;
+   
+   std::cout <<"Afficher le canevas"<<endl;
+   ca.afficher(std::cout);
+   std::cout << endl;
+   
+   std::cout <<"Aire du Canevas"<<endl;
+   //std::cout << ca.aire() <<endl;
+   std::cout << endl;
+   
+   std::cout <<"Réinitialiser le canevas"<<endl;
+   ca.reinitialiser();
+   std::cout << ca.reinitialiser() <<endl;
+   std::cout << endl;
+   
+   std::cout <<"Afficher le canevas"<<endl;
+   ca.afficher(std::cout);
+   std::cout << endl;
+   
+   std::cout <<"Aire du Canevas"<<endl;
+   //std::cout << ca.aire() <<endl;
+   std::cout << endl;
+    
 }
 
 void Tests::tests_application_cas_02()

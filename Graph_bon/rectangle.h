@@ -31,8 +31,8 @@ public:
 	void set_hauteur(int h);
 	int get_largeur();
 	int get_hauteur();
-	double aire();
-	void afficher(ostream & s);
+	double aire() override;
+	void afficher(ostream & s) override;
 };
 
 #endif

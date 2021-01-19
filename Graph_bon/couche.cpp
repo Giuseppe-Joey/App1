@@ -12,14 +12,21 @@
 using namespace std;
 
 Couche::Couche()
-{}
+{
+	SetEtat(Initialisee);
+}
 
 Couche::~Couche()
 {}
 
 bool Couche::AjoutForme(Forme* f)
 {
+	
+	if(getEtat() == Etat::Active)
+	{
 	return v.ajout(f);
+	}
+	return false;
 	
 }
 
@@ -90,27 +97,24 @@ Couche::Etat Couche::getEtat()
 
 void Couche::afficher(ostream & s)
 {
-	if(unEtat != Etat::Initialisee)
-	{
-		
-		if(unEtat == Etat::Cachee)
-		{
-			s << "Couche cachee" << endl;
-		}
-		else if(v.get_size() == 0 && unEtat != Etat::Cachee)
-		{
-			s << "Couche vide" << endl;
-		}
-		else
-		{	
-			v.afficher_vecteur(s);
-		}		
-	}
-	else 
+	if(unEtat == Etat::Initialisee)
 	{
 		s << "Couche Initialisée" << endl;
+		v.afficher_vecteur(s);
 	}
-		
+	else if (unEtat == Etat::Cachee)
+	{
+		s << "Couche cachee" << endl;
+	}
+	else if(v.get_size() == 0)
+	{
+		s << "Couche vide" << endl;
+	}
+	else
+	{	
+		//s << "Couche active" << endl;
+		v.afficher_vecteur(s);
+	}				
 }
 
 

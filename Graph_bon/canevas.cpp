@@ -13,9 +13,9 @@ using namespace std;
 
 Canevas::Canevas()
 {
-	couches[0].SetEtat(Couche::Etat::Active);
-	couches[1].SetEtat(Couche::Etat::Initialisee);
-	couches[2].SetEtat(Couche::Etat::Cachee);
+
+	//cou.SetEtat(Couche::Etat::Cachee);
+
 }
 
 Canevas::~Canevas()
@@ -25,9 +25,8 @@ Canevas::~Canevas()
 bool Canevas::reinitialiser()
 {
    
-	//lindex = 0;
+	
 	cou.Reinitialiser();
-	couches[0].SetEtat(Couche::Etat::Active);
 	return true;
 	
 }
@@ -40,12 +39,16 @@ bool Canevas::activerCouche(int index)
         return false;
     }
     
-    if(couches[index].getEtat() == Couche::Etat::Active)
-    {
-        couches[index].SetEtat(Couche::Etat::Inactive);
+    for(int i=0; i < MAX_COUCHES; i++)
+  	{
+    	if(couches[i].getEtat() == Couche::Etat::Active)
+    	{
+        	couches[i].SetEtat(Couche::Etat::Inactive);
+    	}	
     }
-   couches[index].SetEtat(Couche::Etat::Active);
-   return true;
+    couches[index].SetEtat(Couche::Etat::Active);
+   	return true;
+   
 }
 
 bool Canevas::cacherCouche(int index)
@@ -55,7 +58,7 @@ bool Canevas::cacherCouche(int index)
         return false;
     }
     
-    couches[index].SetEtat(Couche::Etat::Cachee);
+   couches[index].SetEtat(Couche::Etat::Cachee);
    return true;
 }
 
@@ -65,24 +68,33 @@ bool Canevas::ajouterForme(Forme *p_forme)
    for(int i=0; i < MAX_COUCHES; i++)
    {
    	if(couches[i].getEtat() == Couche::Etat::Active)
-   	return cou.AjoutForme(p_forme);
+   	{
+   		return couches[i].AjoutForme(p_forme);
+   	}
    }
    return false;
 }
 
 bool Canevas::retirerForme(int index)
 {
-   return couches[index].RetireForme(index);
+   for(int i=0; i < MAX_COUCHES; i++)
+   {
+   	if(couches[i].getEtat() == Couche::Etat::Active)
+   	{
+   		return couches[i].RetireForme(index);
+   	}
+   }
+   return false;
 }
 
 double Canevas::aire()
 {
-	double aireTolal=0;
+	double aireTolal=0.0;
 	
 	for(int i=0; i < MAX_COUCHES; i++)
         {
 
-            aireTolal += cou.ObtenirForme(i)->aire();
+            aireTolal += couches[i].ObtenirForme(i)->aire();
         } 
 	
 	return aireTolal;
@@ -103,7 +115,7 @@ void Canevas::afficher(ostream & s)
 	for(int i = 0; i < MAX_COUCHES; i++)
 	{
 		s << "----- Couche " << i << endl;
-		cou.afficher(s);
+		couches[i].afficher(s);
 	}
 	
 }
