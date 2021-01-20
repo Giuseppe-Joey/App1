@@ -1,0 +1,152 @@
+TESTS APPLICATION (CAS 01)
+Scénario de validation
+
+# 1 Activer la couche 1
+
+# 2 Ajouter 3 formes géométriques
+Les formes ajoutés sont les suivante: carre c1(4,1,4) , rectangle (2,3,5,6), cercle (2,7,10)
+
+
+#3 Activer couche 2 
+
+#4 Ajouter une forme
+La forme ajouté est :  cercle(6,1,1)
+
+#5 Afficher le canevas
+----- Couche 0
+Couche vide
+----- Couche 1
+Carre(c=4, x=1, y=4, aire=16)
+Rectangle(l=2, h=3, x=5, y=6, aire=6)
+Cercle(r=2, x=7, y=10, aire=12.5664)
+----- Couche 2
+Cercle(r=6, x=1, y=1, aire=113.097)
+----- Couche 3
+Couche Initialisée
+----- Couche 4
+Couche Initialisée
+
+#6 Aire du Canevas
+l'aire est:
+147.664
+
+#7 Activer couche 0
+
+#8 Ajouter 3 formes géométriques différentes
+Les formes ajoutés sont les suivante:carre(6,2,4), rectangle(1,10,2,7), cercle(7,0,3);
+
+#9 Cacher la couche 2
+
+#10 Activer la couche 1
+
+#11 Translater la couche 1
+les valeurs utiliser sont x=4, y=5
+
+# 12 Afficher le canevas
+----- Couche 0
+Carre(c=6, x=2, y=4, aire=36)
+Rectangle(l=1, h=10, x=2, y=7, aire=10)
+Cercle(r=7, x=0, y=3, aire=153.938)
+----- Couche 1
+Carre(c=4, x=5, y=9, aire=16)
+Rectangle(l=2, h=3, x=9, y=11, aire=6)
+Cercle(r=2, x=11, y=15, aire=12.5664)
+----- Couche 2
+Couche cachee
+----- Couche 3
+Couche Initialisée
+----- Couche 4
+Couche Initialisée
+
+#13 Aire du Canevas
+l'aire est:234.504
+
+# 14 Retirer la première forme de la couche
+
+# 15 Afficher le canevas
+----- Couche 0
+Carre(c=6, x=2, y=4, aire=36)
+Rectangle(l=1, h=10, x=2, y=7, aire=10)
+Cercle(r=7, x=0, y=3, aire=153.938)
+----- Couche 1
+Rectangle(l=2, h=3, x=9, y=11, aire=6)
+Cercle(r=2, x=11, y=15, aire=12.5664)
+----- Couche 2
+Couche cachee
+----- Couche 3
+Couche Initialisée
+----- Couche 4
+Couche Initialisée
+
+#16 Aire du Canevas
+l'aire est :218.504
+
+#17 Réinitialiser le canevas
+
+#18 Afficher le canevas
+----- Couche 0
+Couche vide
+----- Couche 1
+Couche Initialisée
+----- Couche 2
+Couche Initialisée
+----- Couche 3
+Couche Initialisée
+----- Couche 4
+Couche Initialisée
+
+# 19 Aire du Canevas
+l'aire totale est :0
+
+FIN DU PROGRAMME
+---------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+TESTS APPLICATION (CAS 02)
+PLAN DE TESTS
+
+*****************************************************
+Affichage de la couche avec valeurs negatives entrees
+*****************************************************
+----- Couche 0
+Couche vide
+----- Couche 1
+Carre(c=4, x=1, y=4, aire=16)
+Rectangle(l=2, h=3, x=5, y=6, aire=6)
+Cercle(r=2, x=7, y=10, aire=12.5664)
+----- Couche 2
+Couche Initialisée
+----- Couche 3
+Couche Initialisée
+----- Couche 4
+Couche Initialisée
+
+l'aire totale de la couche est : 34.5664
+
+
+*******************************************************************
+Les trois prochains tests retourne 1 si vrai et 0 si erreur d'index
+*******************************************************************
+Retrait d'une forme du canevas a un index inexistant : 0
+Activation d'une couche a un index inexistante : 0
+Cacher une couche a un index inexistant : 0
+*******************************************************************
+
+****************************************************************************
+Les deux prochains tests retirent et vont chercher une forme dans un vecteur
+--retourne 1 si vrai et 0 si erreur d'index
+****************************************************************************
+Retrait d'une forme dans un vecteur a un index inexistant : 0
+Obtenir une forme dans un vecteur a un index inexistant : 0
+****************************************************************************
+FIN DU PLAN DE TESTS
